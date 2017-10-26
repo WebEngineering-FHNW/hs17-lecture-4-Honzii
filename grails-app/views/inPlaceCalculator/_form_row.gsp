@@ -16,5 +16,11 @@
          class="${hasError(model, name) ? 'error' : ''}"
          title="${g.message(error: findError(model, name)) }"
 
+         onchange="
+         if(value < 1.0){
+             setAttribute('class', 'error');
+             alert('en value needs to be at least 1.0');
+         }
+         "
   />
 </div>
